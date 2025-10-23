@@ -10,7 +10,7 @@ import qrcode
 import sqlite3
 import wikipedia as wiki
 
-bot = telebot.TeleBot("8174141701:AAE_Ur8-2HcUtdc0sNOZCbKQOWjadUkDSIo")
+bot = telebot.TeleBot("token")
 
 ########################
 ### Main Menu button ###
@@ -390,6 +390,7 @@ bot.infinity_polling()
 
         
     
+
 
 
     
