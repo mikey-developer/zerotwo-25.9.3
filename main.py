@@ -2,6 +2,13 @@
 from Mikey*dev
 https://t.me/mrmikey_dev
 02 Chat Manager
+
+pip install pytelegrambotapi
+pip install wikipedia
+pip install qrcode
+pip install pillow
+
+Author https://t.me/mikey_developer
 """
 import telebot 
 from telebot.types import ReplyKeyboardMarkup
@@ -394,3 +401,4 @@ bot.infinity_polling()
 
 
     
+
