@@ -356,7 +356,7 @@ def send_message(m):
             
             # sdb("base.db", do, ({m.reply_to_message.from_user.id}, {m.from_user.username}, "mute"))
             send(mid, f"{m.from_user.first_name} muted\n"
-                    f"Reason: {m[6:]}"
+                    f"Reason: {msg[6:]}"
                 )
             delete(mid, msg_id)
         
@@ -366,7 +366,7 @@ def send_message(m):
         if member.status == "administrator":
             bot.kick_chat_member(mid, m.from_user.id, m.date +1)
             send(mid, f"{m.from_user.first_name} kicked\n"
-                    f"Reason: {m[5:]}"
+                    f"Reason: {msg[5:]}"
                 )
             delete(mid, msg_id)
         
@@ -378,7 +378,7 @@ def send_message(m):
             # * user but you need to write without parameters
             bot.promote_chat_member(mid, m.from_user.id)
             send(mid, f"{m.from_user.first_name} unmuted\n"
-                    f"Reason: {m[8:]}"
+                    f"Reason: {msg[8:]}"
                 )
             delete(mid, msg_id)
         
@@ -389,7 +389,7 @@ def send_message(m):
             bot.unban_chat_member(mid, m.from_user.id)
             sdb("base.db", f"DELETE FROM '{m.chat.id} WHERE user_id = '{m.from_user.id}'")
             send(mid, f"{m.from_user.first_name} unbanned\n"
-                    f"Reason: {m[7:]}"
+                    f"Reason: {msg[7:]}"
                 )
             delete(mid, msg_id)
  
